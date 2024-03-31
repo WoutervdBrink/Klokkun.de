@@ -79,7 +79,7 @@ widget('emoji', 'Emoji', (d) => {
     const minutes = d.getMinutes();
 
     if (minutes === 30 || minutes === 0) {
-        return emoji.clock(hours === 0 ? 12 : hours, minutes === 30);
+        return emoji.clock(hours === 0 ? 12 : hours % 12, minutes === 30);
     }
 
     if (hours === 3 && minutes === 14) {
